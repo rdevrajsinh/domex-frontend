@@ -1,0 +1,380 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: radial-gradient(circle, #1e3c72, #2a5298); /* Radial gradient */
+}
+
+.main {
+  margin-left: auto;
+  margin-top: 20px;
+  margin-right: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.domain-list-container {
+  border-radius: 12px;
+  max-width: 1200px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+}
+
+/* Add Domain Button Container (Flexbox) */
+.add-domain-btn-container {
+  border: none;
+  color: #fff;
+  background-image: linear-gradient(135deg, #66ab77, #2d876c);
+  border-radius: 25px;
+  background-size: 100% auto;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 12px 18px;
+  position: absolute;
+  right: 30px;
+  top: 16.5%;
+  transition: background-position 0.3s ease;
+}
+
+/* Position the add domain button next to the search bar */
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 70%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: #007bff;
+  outline-color: #007bff;
+}
+
+/* Add hover and animation effect for button */
+.add-domain-btn-container:hover {
+  background-position:  center;
+  background-size: 200% auto;
+  animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Table Styles (Responsive Design) */
+.domain-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+}
+
+.domain-table th,
+.domain-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.domain-table th {
+  background-color: #2d3e50;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.domain-table td {
+  color: #555;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.domain-table tr:nth-child(even) {
+  background-color: #f4f6f9;
+}
+
+.domain-table tr:hover {
+  background-color: #bbb2b2;
+  cursor: pointer;
+}
+
+.domain-table td button {
+  padding: 8px 16px;
+  margin: 4px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.domain-table .edit-button {
+  background-color: #28a745;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.domain-table .delete-button {
+  background-color: #dc3545;
+  color: white;
+  padding-left: 21px;
+  padding-right: 21px;
+}
+
+.domain-table .edit-button:hover {
+  background-color: #218838;
+}
+
+.domain-table .delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Modal Styles */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 600px;
+  width: 100%;
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.close-modal-btn {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.close-modal-btn:hover {
+  color: #007bff;
+}
+
+/* Header Styles */
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+}
+
+/* Logo Styles (No change, keeps logo at the rightmost) */
+.header-logo {
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-left: auto;
+}
+
+.header-logo:hover {
+  transform: scale(1.1);
+}
+
+/* DomEX Text Styles */
+.domex-text {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+/* Styles for EX to make it different color */
+.domex-text .ex {
+  color: #FF6347; /* Change color as needed */
+}
+
+/* Underline */
+.header-underline {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  margin-top: 22px;
+  height: 0.5px;
+  background-color: #007bff;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .domain-table th, .domain-table td {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .domain-table th, .domain-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .header-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .add-domain-btn-container {
+    margin-left: 75%;
+  }
+}
+
+@media (max-width: 480px) {
+  .domain-table th, .domain-table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .header-logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .add-domain-btn-container {
+    margin-left: 50%;
+    font-size: 12px;
+  }
+}
+
+
+
+
+.geeks {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.geeks span {
+  font-family: Arial, sans-serif;
+  font-size: 50px; /* Increase the font size for a bold effect */
+  color: white; /* Default text color */
+  display: inline-block;
+  transition: all 0.5s;
+  animation: animate 2s infinite;
+  font-weight: bold; /* Make letters bold */
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Big shadow effect */
+}
+
+.geeks span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.geeks span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.geeks span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.geeks span:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.geeks span:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.geeks span:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* Apply gradient to E and X */
+.geeks span:nth-child(5), /* "E" */
+.geeks span:nth-child(4) { /* "X" */
+  background: linear-gradient(45deg, #ff007f, #ffab00); /* Gradient color */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  color: transparent; /* Make text color transparent to show gradient */
+  text-shadow: none; /* Remove text shadow for these letters */
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0);
+    margin-left: 0;
+  }
+  25% {
+    transform: translateY(-15px);
+    margin-left: 10px;
+  }
+  100% {
+    transform: translateY(0);
+    margin-left: 0;
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .geeks {
+    top: 35%;
+  }
+
+  .geeks span {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .geeks {
+    top: 20%; /* Move it further up on smaller screens */
+  }
+
+  .geeks span {
+    font-size: 40px; /* Smaller font size on tablets and mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .geeks {
+    top: 10%; /* Further reduce top position for very small screens */
+  }
+
+  .geeks span {
+    font-size: 30px; /* Even smaller font size for mobile */
+  }
+}

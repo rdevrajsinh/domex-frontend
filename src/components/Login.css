@@ -1,0 +1,198 @@
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-login {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Blue gradient */
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    position: absolute; /* Absolute positioning */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Full screen height */
+    background-size: cover; /* Ensure gradient covers entire screen */
+  }
+  .description {
+    font-size: 40px;
+    color: #e0e0e0;
+    text-align: center;
+    margin-top:10%;
+    margin-left: 20%;
+    font-family: 'Arial', sans-serif;
+    
+
+    text-transform: uppercase;
+  color: #0000;
+  font-family: sans-serif;
+  
+  font-weight: bold;
+  background: 
+    repeating-radial-gradient(#000 0 0.0001%,#fff 0 0.0002%) 50% 0/2500px 2500px,
+    repeating-conic-gradient(#000 0 0.0001%,#fff 0 0.0002%) 50% 50%/2500px 2500px;
+  background-blend-mode: difference;
+  mix-blend-mode: lighten;
+  -webkit-background-clip: text;
+          background-clip: text;
+  }
+  .login-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5%;
+    top: 50%;
+  }
+  
+  .login-box {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    padding: 2rem;
+    border-radius: 15px; /* Rounded corners */
+    width: 350px;
+    text-align: center;
+  }
+  
+  .login-title {
+    margin-bottom: 1.5rem;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .login-input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Inner shadow */
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .login-input:focus {
+    outline: none;
+    border-color: #2a5298; /* Focus border color */
+    box-shadow: 0 0 8px rgba(42, 82, 152, 0.5); /* Glowing effect on focus */
+  }
+  
+  .login-button {
+    background: #1e3c72; /* Button color gradient */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px; /* Rounded button */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background: #2a5298; /* Lighter shade on hover */
+  }
+  
+  .geeks {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .geeks span {
+    font-family: Arial, sans-serif;
+    font-size: 90px; /* Increase the font size for a bold effect */
+    color: white; /* Default text color */
+    display: inline-block;
+    transition: all 0.5s;
+    animation: animate 2s infinite;
+    font-weight: bold; /* Make letters bold */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Big shadow effect */
+  }
+  
+  .geeks span:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .geeks span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .geeks span:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .geeks span:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .geeks span:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .geeks span:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+  
+  /* Apply gradient to E and X */
+  .geeks span:nth-child(5), /* "E" */
+  .geeks span:nth-child(4) { /* "X" */
+    background: linear-gradient(45deg, #ff007f, #ffab00); /* Gradient color */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    color: transparent; /* Make text color transparent to show gradient */
+    text-shadow: none; /* Remove text shadow for these letters */
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: translateY(0);
+      margin-left: 0;
+    }
+    25% {
+      transform: translateY(-15px);
+      margin-left: 10px;
+    }
+    100% {
+      transform: translateY(0);
+      margin-left: 0;
+    }
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 1024px) {
+    .geeks {
+      top: 35%;
+    }
+  
+    .geeks span {
+      font-size: 80px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .geeks {
+      top: 20%; /* Move it further up on smaller screens */
+    }
+  
+    .geeks span {
+      font-size: 70px; /* Smaller font size on tablets and mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .geeks {
+      top: 10%; /* Further reduce top position for very small screens */
+    }
+  
+    .geeks span {
+      font-size: 60px; /* Even smaller font size for mobile */
+    }
+  }
+  
