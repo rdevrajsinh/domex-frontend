@@ -1,5 +1,6 @@
 /* AddDomainForm.css */
 
+/* Default styles for larger screens */
 .add-domain-form {
   display: flex;
   flex-direction: column;
@@ -154,7 +155,7 @@ button.cancel-button:hover {
 }
 
 .custom-option-dropdown:hover {
-  background-color: #f0f0f0;
+  background-color: #86bdf5cd;
 }
 
 .custom-option-dropdown option {
@@ -162,4 +163,46 @@ button.cancel-button:hover {
   background-color: #fff;
   color: #333;
   text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .add-domain-form {
+    padding: 10px;
+    width: 90%;  /* Adjust width for mobile */
+    max-width: 100%; /* Remove max-width constraint */
+    box-shadow: none; /* Remove shadow for smaller screens */
+  }
+
+  /* Input field styling on mobile */
+  .domain-input {
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 10px; /* Reduced margin for mobile */
+  }
+
+  /* Button styling on mobile */
+  .add-domain-button-form {
+    padding: 10px 20px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 200px;  /* Reduced max-width for mobile */
+  }
+
+  /* Modal styles for mobile */
+  .modal-container {
+    width: 90%;  /* Adjust modal width for mobile */
+    max-width: 100%; /* Remove max-width constraint */
+    padding: 20px 15px; /* Reduced padding */
+  }
+
+  .cancel-button {
+    padding: 8px 15px;  /* Reduced button size */
+  }
+
+  /* Dropdown styling on mobile */
+  .custom-option-dropdown {
+    padding: 10px;
+    font-size: 14px;
+  }
 }

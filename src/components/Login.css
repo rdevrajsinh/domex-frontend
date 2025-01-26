@@ -3,6 +3,9 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    
   }
   
   .main-login {
@@ -184,15 +187,42 @@ html, body {
     .geeks span {
       font-size: 70px; /* Smaller font size on tablets and mobile */
     }
+    .login-container {
+      padding: 0;
+      align-items: flex-start; /* Align login box towards the top */
+  }
+
+  .login-box {
+      width: 90%; /* Reduce width for smaller screens */
+      margin-top: 10%; /* Add margin from the top */
+  }
   }
   
   @media (max-width: 480px) {
-    .geeks {
-      top: 10%; /* Further reduce top position for very small screens */
+    .main-login {
+      flex-direction: column; /* Stack elements vertically */
+      align-items: center; /* Center align the content */
+      justify-content: flex-start; /* Start aligning from the top */
     }
   
-    .geeks span {
-      font-size: 60px; /* Even smaller font size for mobile */
+    .geeks {
+      order: 1; /* Show DOMEX text first */
+      top: 10%; /* Reset top position */
+      margin-bottom: 10%; /* Add space below DOMEX */
+    }
+  
+    .login-box {
+      order: 2; /* Place the login box after DOMEX */
+      width: 100%; /* Full width for better visibility */
+      margin: 0 auto; /* Center the login box horizontally */
+      margin-top: 70%; /* Space above login box */
+      padding: 1rem; /* Adjust padding for mobile */
+    }
+  
+    .description {
+      order: 3; /* Show the paragraph text last */
+     margin-left: 0;/* Smaller font for mobile */
     }
   }
+  
   

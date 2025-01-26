@@ -5,11 +5,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  color: white;
+  background: #E8F9FF;
+  color: rgb(0, 0, 0);
   padding-top: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Keep it on top */
+   /* Keep it on top */
 }
 
 .sidebar h2 {

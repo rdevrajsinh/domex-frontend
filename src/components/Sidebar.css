@@ -1,10 +1,10 @@
 /* Sidebar Styling */
 
 .sidebar {
-  width: 500px;
+  width: 700px;
  
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #ecf0f1;
+  background-color: #C4D9FF;
+  color: #000000;
   position: fixed;
   top: 0;
   left: 0;
@@ -13,37 +13,54 @@
   flex-direction: column;
   box-shadow: 2px 0 5px rgb(118, 137, 161);
 }
+.side{
+  z-index:1001;
+}
+.sidebar-toggle{
+  visibility: hidden;
+}
 
 .sidebar-title {
   font-size: 24px;
+  color: black;
   font-weight: bold;
   text-align: center;
   padding: 20px 10px;
-  border-bottom: 1px solid #5992ca;
+  
 }
 
 .sidebar-menu {
-  list-style: none;
+  
   margin: 0;
   padding: 10px;
   overflow-y: auto;
   flex: 1;
+  
+  
 }
 
 .sidebar-menu li {
   margin-bottom: 10px;
-  padding: 10px 15px;
+  padding: 5px 5px;
   font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  
 }
 
 .sidebar-menu li:hover {
-  background-color: #4a6f94;
+  background-color: #37a4e8b4;
+  border-radius: 10%;
+  width: 70%;
+  color: rgb(255, 255, 255);
 }
 
 .sidebar-menu a {
   text-decoration: none;
   color: inherit;
+  
 }
 
 /* Overlay for Mobile */
@@ -53,8 +70,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  background-color: rgba(59, 4, 237, 0.752);
+  z-index: 1001;
   display: none;
 }
 
@@ -79,6 +96,7 @@
   .sidebar {
     transform: translateX(-250px);
     transition: transform 0.3s ease;
+    z-index: 1001;
   }
 
   .sidebar-overlay {
@@ -92,4 +110,245 @@
   .app-container.sidebar-open .main-content {
     margin-left: 0;
   }
+  .sidebar-toggle{
+visibility: visible;
+
 }
+}
+.sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #000000;
+ 
+  transition: transform 0.3s ease;
+}
+
+/* Sidebar when closed */
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+/* Sidebar when open */
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #0fabffc3;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+.sidebar-icon{
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+
+
+
+/* Main Popup Style */
+.popup {
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-height: 350px;
+  overflow-y: auto;
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+  z-index:1001;
+  list-style-type:none;
+}
+
+/* Header inside the popup */
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f0f0f0;
+  font-size: 15px;
+  color: #555;
+  z-index:1001;
+  margin-left: 10px;
+  color: #75c4e0;
+}
+
+.close-popup {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #ff6b6b;
+  transition: color 0.3s ease;
+  z-index:1001;
+}
+
+.close-popup:hover {
+  color: #e74c3c;
+}
+
+/* Server Options */
+.server-options ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.server-options li {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #bcf0ffcc;
+  margin: 5px 0;
+  font-size: 16px;
+  color: #444;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.server-options li:hover {
+  background-color: #f0f0f0;
+  color: #007bff;
+}
+
+/* Hover Popup Style */
+.hover-popup {
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+  width: 320px;
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+  color: #333333;
+  transition: all 0.3s ease-in-out;
+  z-index:1001;
+}
+
+/* Header of Hover Popup */
+.hover-popup h4 {
+  margin: 0 0 15px;
+  font-size: 18px;
+  color: #75c4e0;
+  border-bottom: 2px solid #f0f0f0;
+  
+}
+
+/* Paragraph styles in Hover Popup */
+.hover-popup p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #5f5252;
+}
+
+.hover-popup p strong {
+  color: #333;
+}
+
+/* Hover popup sections for domain details */
+.hover-popup .domain-details {
+  margin-top: 10px;
+}
+
+.hover-popup .domain-details p {
+  margin-bottom: 8px;
+}
+
+.hover-popup .domain-details p:last-child {
+  margin-bottom: 0;
+}
+
+/* Styling the domain name in the list */
+.popup ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between items */
+}
+
+.popup ul li {
+  padding: 10px 15px; /* Inner padding for items */
+  background-color: #fafafa;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.popup ul li:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+
+
+
+.geeeks{
+  font-size: 50px;
+  
+}
+/* Styles for EX to make it different color */
+.geeeks span:nth-child(5), /* "E" */
+  .geeeks span:nth-child(4) { /* "X" */
+    background: linear-gradient(45deg, #ff007f, #ffab00); /* Gradient color */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    color: transparent; /* Make text color transparent to show gradient */
+    text-shadow: none; /* Remove text shadow for these letters */
+  }
+  .geeeks span {
+    font-family: Arial, sans-serif;
+    font-size: 50px; /* Increase the font size for a bold effect */
+    color: white; /* Default text color */
+    display: inline-block;
+    transition: all 0.5s;
+    animation: animate 2s infinite;
+    font-weight: bold; /* Make letters bold */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Big shadow effect */
+  }
+  
+  .geeeks span:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .geeeks span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .geeeks span:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .geeeks span:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .geeeks span:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .geeeks span:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+  
+  .arrow {
+    display: inline-block;
+    margin-left: 8px;
+    transition: transform 0.3s ease; /* Smooth animation */
+  }
+  
+  .arrow.rotate {
+    transform: rotate(90deg); /* Rotate 180 degrees when the menu is open */
+  }

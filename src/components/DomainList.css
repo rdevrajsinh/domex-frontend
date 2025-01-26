@@ -2,51 +2,56 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
-  background: radial-gradient(circle, #1e3c72, #2a5298); /* Radial gradient */
+  background: #FBFBFB; /* Radial gradient */
 }
 
 .main {
-  margin-left: auto;
   margin-top: 20px;
   margin-right: 20px;
-  font-family: 'Arial', sans-serif;
+  width: 100vmax;
+  margin-right: 0px;
+  z-index: 1000;
+  position: relative;
 }
 
 .domain-list-container {
   border-radius: 12px;
   max-width: 1200px;
-  margin: auto;
+ 
   background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+  margin-left: 300px;
 }
 
 /* Add Domain Button Container (Flexbox) */
 .add-domain-btn-container {
+  display: flex;
   border: none;
   color: #fff;
-  background-image: linear-gradient(135deg, #66ab77, #2d876c);
+  background-image: linear-gradient(135deg, #5c9ce9, #5bc7f1);
   border-radius: 25px;
   background-size: 100% auto;
   font-family: inherit;
   font-size: 16px;
   padding: 12px 18px;
   position: absolute;
-  right: 30px;
-  top: 16.5%;
+  justify-content: right;
+  margin-top:1%;
   transition: background-position 0.3s ease;
+  margin-left: 300px;
 }
 
 /* Position the add domain button next to the search bar */
 .search-bar-container {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  
 }
 
 .search-bar {
-  width: 70%;
+  width: 30%;
   padding: 12px;
   font-size: 16px;
   border-radius: 6px;
@@ -62,7 +67,7 @@ body {
 
 /* Add hover and animation effect for button */
 .add-domain-btn-container:hover {
-  background-position:  center;
+  background-position: center;
   background-size: 200% auto;
   animation: pulse512 1.5s infinite;
 }
@@ -95,24 +100,26 @@ body {
   padding: 10px;
   text-align: left;
   border: 1px solid #ddd;
+  
 }
 
 .domain-table th {
-  background-color: #2d3e50;
+  background-color: #98D8EF;
   color: white;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  
+  
 }
 
 .domain-table td {
   color: #555;
   background-color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 1px;
 }
 
-.domain-table tr:nth-child(even) {
-  background-color: #f4f6f9;
-}
 
 .domain-table tr:hover {
   background-color: #bbb2b2;
@@ -129,17 +136,15 @@ body {
 }
 
 .domain-table .edit-button {
-  background-color: #28a745;
+  background-color: #44c5f8ca;
   color: white;
-  padding-left: 30px;
-  padding-right: 30px;
+  
 }
 
 .domain-table .delete-button {
-  background-color: #dc3545;
+  background-color: #dc3546b6;
   color: white;
-  padding-left: 21px;
-  padding-right: 21px;
+  
 }
 
 .domain-table .edit-button:hover {
@@ -195,7 +200,10 @@ body {
 }
 
 /* Header Styles */
-/* Header Styles */
+
+.mobile-table{
+  display: none;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -224,8 +232,12 @@ body {
   color: white;
   display: flex;
   align-items: center;
+  margin-top: 70px;
 }
-
+.geeks{
+  font-size: 50px;
+  margin-left:10%;
+}
 /* Styles for EX to make it different color */
 .domex-text .ex {
   color: #FF6347; /* Change color as needed */
@@ -235,55 +247,13 @@ body {
 .header-underline {
   position: absolute;
   left: 0;
-  width: 100%;
+  width: 100vmax;
   margin-top: 22px;
   height: 0.5px;
   background-color: #007bff;
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  .domain-table th, .domain-table td {
-    padding: 10px;
-  }
-}
-
-@media (max-width: 768px) {
-  .domain-table th, .domain-table td {
-    padding: 8px;
-    font-size: 14px;
-  }
-
-  .header-logo {
-    width: 35px;
-    height: 35px;
-  }
-
-  .add-domain-btn-container {
-    margin-left: 75%;
-  }
-}
-
-@media (max-width: 480px) {
-  .domain-table th, .domain-table td {
-    padding: 8px;
-    font-size: 12px;
-  }
-
-  .header-logo {
-    width: 30px;
-    height: 30px;
-  }
-
-  .add-domain-btn-container {
-    margin-left: 50%;
-    font-size: 12px;
-  }
-}
-
-
-
-
+/* Geeks Animation */
 .geeks {
   position: absolute;
   top: 40%;
@@ -296,13 +266,14 @@ body {
 
 .geeks span {
   font-family: Arial, sans-serif;
-  font-size: 50px; /* Increase the font size for a bold effect */
-  color: white; /* Default text color */
+  font-size: 50px;
+  color: white;
   display: inline-block;
   transition: all 0.5s;
   animation: animate 2s infinite;
-  font-weight: bold; /* Make letters bold */
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Big shadow effect */
+  font-weight: bold;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  top:50px;
 }
 
 .geeks span:nth-child(1) {
@@ -324,13 +295,13 @@ body {
   animation-delay: 0.6s;
 }
 
-/* Apply gradient to E and X */
-.geeks span:nth-child(5), /* "E" */
-.geeks span:nth-child(4) { /* "X" */
-  background: linear-gradient(45deg, #ff007f, #ffab00); /* Gradient color */
-  -webkit-background-clip: text; /* Clip the background to the text */
-  color: transparent; /* Make text color transparent to show gradient */
-  text-shadow: none; /* Remove text shadow for these letters */
+/* Gradient effect for E and X */
+.geeks span:nth-child(5),
+.geeks span:nth-child(4) {
+  background: linear-gradient(45deg, #ff007f, #ffab00);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: none;
 }
 
 @keyframes animate {
@@ -350,31 +321,406 @@ body {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
-  .geeks {
-    top: 35%;
-  }
-
-  .geeks span {
-    font-size: 50px;
+  .domain-table th, .domain-table td {
+    padding: 10px;
   }
 }
 
 @media (max-width: 768px) {
+  
+
+
+  .search-bar-container {
+    flex-direction: column;
+    align-items: center;
+    top: 50px;
+  }
+
+  .search-bar {
+    width: 80%;
+    margin-bottom: 15px;
+  }
+  
+}
+/*
+@media (max-width: 480px) {
+  .header-logo {
+    width: 30px;
+    height: 30px;
+  }
+
   .geeks {
-    top: 20%; /* Move it further up on smaller screens */
+    top: 10%;
+    flex-direction: column;
   }
 
   .geeks span {
-    font-size: 40px; /* Smaller font size on tablets and mobile */
+    font-size: 30px;
+  }
+
+  .add-domain-btn-container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 70px;
+    width: 10%;
+  }
+  
+}
+
+*/
+@media (max-width: 480px) {
+  /* Centering the logo at the top */
+  .header {
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+  }
+
+  /* Logo adjustments for mobile */
+  .header-logo {
+    width: 30px;  /* Adjust the logo size */
+    height: 30px; /* Adjust the height for proportion */
+    /* Remove any margins */
+  }
+
+  /* Disable the animation on mobile */
+  .geeks {
+    display: none;  /* Hide the animation on mobile */
+  }
+
+  /* Adjust logo text to appear next to each other */
+  .domex-text {
+    font-size: 28px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 70px;
+  }
+
+  /* Make sure letters are in line */
+  .domex-text .ex {
+    color: #FF6347; /* Different color for EX */
+  }
+
+  .header-logo:hover {
+    transform: none;  /* Remove hover animation on mobile */
+  }
+
+
+  .add-domain-btn-container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 70px;
+    width: 10%;
+  }
+}
+
+
+
+
+/* In DomainList.css */
+
+/* Hide the 'More Info' column on desktop */
+
+/* In case some borders are still showing due to table styling */
+table {
+  border-collapse: collapse !important; /* Collapse any borders between cells */
+}
+
+/* Show the 'More Info' column only on mobile devices */
+@media (max-width: 768px) {
+  .more-info-column {
+    display: table-cell;
+  }
+  .more-info-button{
+    display: table-cell;
+    background-color: white;
+    
+  }
+  .domain-list-container{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.action-icons {
+  display: flex;
+  gap: 10px; /* Adds space between icons */
+   /* Vertically aligns the icons */
+   display: flex;
+}
+
+.action-icon {
+  width: 15px; /* Smaller size for the icons */
+  height: 15px; /* Maintain aspect ratio */
+  cursor: pointer; /* Makes the icon clickable */
+}
+
+/* Logo Container */
+.logo-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 40px; /* Adjust position based on logo size */
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  padding: 8px 0;
+  text-align: center;
+}
+
+/* Dropdown Item */
+.dropdown-item {
+  background-color: #fff;
+  padding: 8px 12px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+
+/* Styling for the dropdown menu */
+.logout-menu {
+  position: absolute;
+  top: 60px; /* Adjust based on your layout */
+  right: 10px;
+  background-color: white;
+  border: 2px solid #ccc;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10000;
+  
+
+}
+
+.logout-btn {
+  background-color: white; /* Red color for logout */
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.logout-btn:hover{
+  background-color: #E8F9FF;
+}
+.reg-btn {
+  background-color: white; /* Red color for logout */
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.reg-btn:hover {
+  background-color: #E8F9FF;
+}
+
+@media only screen and (max-width: 768px) {
+  .full-table {
+    display: none;
+  }
+
+  .mobile-table {
+    display: table;
+  }
+
+  .header-underline {
+   display: none;
+  }
+
+  .geeks {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 40px;
+  }
+
+  .search-bar-container {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .search-bar {
+    width: 60%;
+    top:10px;
+    
+  }
+
+  
+  .add-domain-btn-container {
+    position: relative;
+   
+    top: 0px;
+    width: 50%;
+    justify-content: center;
+
+  }
+  .mobile-table{
+    width: 46vmax;
+  }
+}
+
+/* Style the mobile table */
+.mobile-table th, .mobile-table td {
+  padding: 10px;
+  text-align: center;
+  
+}
+
+.mobile-table .action-icon {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+  .modal-container {
+     /* Reduce padding on smaller devices */
+     top: 30%; /* Move the modal to the top of the screen */
+    padding: 10px; /* Reduce padding for smaller popup */
+    max-width: 300px; /* Reduce width of the popup */
+    width: 90%; /* Make it responsive and fit smaller screens */
+    height: auto;  /* Limit the max width to 80% of the viewport */
+  }
+
+  .header-underline {
+    display: none;
+  }
+
+  .modal-content {
+    padding: 15px; /* Adjust padding for content */
+  }
+
+  .close-modal-btn {
+    font-size: 24px; /* Reduce the size of the close button */
+    top: 8px;
+    right: 8px;
   }
 }
 
 @media (max-width: 480px) {
-  .geeks {
-    top: 10%; /* Further reduce top position for very small screens */
+  .modal-container {
+     /* Even less padding for very small devices */
+     top: 30%; /* Move the modal to the top of the screen */
+     padding: 10px; /* Reduce padding for smaller popup */
+     max-width: 300px; /* Reduce width of the popup */
+     width: 90%; /* Make it responsive and fit smaller screens */
+     height: auto; 
   }
 
-  .geeks span {
-    font-size: 30px; /* Even smaller font size for mobile */
+  .modal-content {
+    padding: 10px;  /* Reduce content padding */
   }
+
+  .close-modal-btn {
+    font-size: 20px; /* Further reduce font size of the close button */
+    top: 5px;
+    right: 5px;
+  }
+
+  /* Optionally adjust font size for modal content */
+  .modal-content p {
+    font-size: 14px; /* Decrease font size for text */
+  }
+}
+
+
+.sv-button,
+.cl-button {
+  width: 48%; /* Buttons will take 48% width, allowing space between them */
+  border-radius: 10px; /* Adding border-radius */
+}
+
+.sv-button {
+  background-color: #6fd772db;
+  color: white;
+}
+
+.sv-button:hover {
+  background-color: #68bb6cd8;
+}
+
+.cl-button {
+  background-color: #fa6156c3;
+  color: white;
+}
+
+.cl-button:hover {
+  background-color: #e53935;
+}
+
+/* Update Button */
+.udt-button {
+  background-color: #0cbaffbc;
+  color: white;
+  width: 48%;
+  border-radius: 10px; /* Border radius added */
+  padding: 8px;
+}
+
+.udt-button:hover {
+  background-color: #00bbffd8;
+}
+
+/* Delete Button */
+.dlt-button {
+  background-color: #d32f2fb7;
+  color: white;
+  width: 48%;
+  border-radius: 10px; /* Border radius added */
+  padding: 8px;
+}
+
+.dlt-button:hover {
+  background-color: #c62828;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%; /* Ensure the modal actions container takes full width */
+}
+
+
+
+.sidebar-icon{
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
 }
